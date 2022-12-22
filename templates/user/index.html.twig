@@ -1,0 +1,83 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Etudiant index{% endblock %}
+
+{% block body %}
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title mb-0">Etudiant</h3>
+    </div>
+    <div class="card-body">
+        <table id="scroll-horizontal" class="table nowrap align-middle card-li table-datatable" style="width:100%">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Adresse</th>
+                <th>Image</th>
+                <th>Naissance</th>
+                <th>Formation payer</th>
+
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.nom }}</td>
+                <td>{{ user.prenom }}</td>
+                <td>{{ user.adresse }}</td>
+                <td class="w-5"><img style="width: 70px; height: 70px" class="img-fluid img-thumbnail"
+                                     src="{{ vich_uploader_asset(user, 'imageFile') }}" alt="{{ user.nom }}">
+                </td>
+                <td>{{ user.naissance ? user.naissance|date('Y-m-d') : '' }}</td>
+                <td>
+                    <div class="dropdown d-inline-block">
+                        <button class="btn btn-soft-secondary btn-sm dropdown" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill align-middle"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            {% for formation in user.formation %}
+                                <span class="badge bg-primary dropdown-item">{{ formation.nom }}</span>
+                            {% else %}
+                                <span class="badge bg-danger dropdown-item">Aucun Formation</span>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                </td>
+                <td>
+                    <div class="dropdown d-inline-block">
+                        <button class="btn btn-soft-secondary btn-sm dropdown" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill align-middle"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a href="{{ path('app_user_edit', {'id': user.id}) }}"
+                                   class="dropdown-item remove-item-btn">
+                                    <i class="ri-add-box-fill align-bottom me-2 text-muted"></i> Ajouter une formation
+                                </a>
+                        </ul>
+                    </div>
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+    </div>
+</div>
+
+    {{ encore_entry_script_tags('datatable') }}
+
+{% endblock %}

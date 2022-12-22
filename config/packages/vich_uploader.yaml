@@ -1,0 +1,24 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        cours:
+            uri_prefix: /images/cours
+            upload_destination: '%kernel.project_dir%/public/images/cours'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+        fichier:
+            uri_prefix: /images/fichier
+            upload_destination: '%kernel.project_dir%/public/images/fichier'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+        profile:
+            uri_prefix: /images/profile
+            upload_destination: '%kernel.project_dir%/public/images/profile'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+        formateur:
+            uri_prefix: /images/formateur
+            upload_destination: '%kernel.project_dir%/public/images/formateur'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+        formation:
+            uri_prefix: /images/formation
+            upload_destination: '%kernel.project_dir%/public/images/formation'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer

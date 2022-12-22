@@ -1,0 +1,17 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Etudiant index{% endblock %}
+
+{% block body %}
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title mb-0">Etudiant</h3>
+    </div>
+    <div class="card-body">
+
+    {{ include('cour/_form.html.twig') }}
+
+    </div>
+</div>
+
+    {% endblock %}

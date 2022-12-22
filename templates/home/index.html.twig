@@ -1,0 +1,619 @@
+{% extends 'baseFront.html.twig' %}
+
+{% block title %}Etudiant index{% endblock %}
+
+{% block body %}
+
+    <!-- Course Section Start -->
+    <div class="courses-section section-padding-02">
+        <div class="container">
+
+            <!-- Section Title Start -->
+            <div class="section-title text-center" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="section-title__title">Nos <mark>Meilleur</mark> Formation </h2>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="tab1">
+
+                    <div class="row g-6">
+                        {% for formation in formations %}
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+
+                            <!-- Course Start -->
+                            <div class="course-item" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="course-header">
+                                    <div class="course-header__thumbnail ">
+                                        <a href="course-single-layout-01.html"><img src="{{ vich_uploader_asset(formation, 'imageFile') }}" style="width: 330px;height: 221px" alt="courses" width="330" height="221"></a>
+                                    </div>
+                                </div>
+                                <div class="course-info">
+                                    <div class="row">
+                                        <div class="col"><span class="course-info__badge-text badge-all">Pour Tout les Niveau</span></div>
+                                        <div class="col"> <span class="course-info__badge-text badge-border">Durer:{{ formation.description }}</span></div>
+
+                                    </div>
+                                    <h3 class="course-info__title-02"><a href="#">{{ formation.description }}</a></h3>
+                                    <a href="#" class="course-info__instructor">{{ formation.nom }}</a>
+                                    <div class="course-info__price">
+                                        <span class="sale-price">200 000 <small class="separator">CFA</small></span>
+                                    </div>
+                                    <div class="course-info__rating">
+
+                                        <div class="rating-star">
+                                            <div class="rating-label" style="width: 80%;"></div>
+                                        </div>
+
+                                        <span>(2)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Course End -->
+
+                        </div>
+                        {% else %}
+                            <h1>Aucune Formation disponible</h1>
+                        {% endfor %}
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Course Section End -->
+
+    <!-- Call To Action Start -->
+    <div class="call-to-action section-padding-01">
+        <div class="container">
+
+            <!-- Call To Action Wrapper Start -->
+            <div class="call-to-action__wrapper">
+
+                <!-- Call To Action Icon Start -->
+                <div class="call-to-action__icon" data-aos="zoom-in" data-aos-duration="1000">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <!-- Call To Action Icon End -->
+
+                <!-- Call To Action Content Start -->
+                <div class="call-to-action__content">
+
+                    <div class="call-to-action__shape-01"></div>
+                    <div class="call-to-action__shape-02"></div>
+                    <div class="call-to-action__shape-03"></div>
+
+                    <div class="call-to-action__caption">
+                        <h3 class="call-to-action__sub-title">Let Us Help</h3>
+                        <h3 class="call-to-action__main-title">Finding Your Right Courses</h3>
+                    </div>
+                    <div class="call-to-action__btn">
+                        <a class="btn btn-secondary btn-hover-primary" href="course-category.html">Get started</a>
+                    </div>
+
+                </div>
+                <!-- Call To Action Content End -->
+
+            </div>
+            <!-- Call To Action Wrapper End -->
+
+        </div>
+    </div>
+    <!-- Call To Action End -->
+
+    <!-- Counter Start -->
+    <div class="counter-section bg-color-02">
+        <div class="container">
+
+            <div class="row gy-10 align-items-center">
+                <div class="col-xl-3 col-lg-4">
+
+                    <!-- Section Title Start -->
+                    <div class="section-title mb-0" data-aos="fade-up" data-aos-duration="1000">
+                        <h4 class="section-title__sub-title">START TO SUCCESS</h4>
+                        <h2 class="section-title__title-02">Achieve Your Goals with <mark>EduMall</mark></h2>
+                    </div>
+                    <!-- Section Title End -->
+
+                </div>
+                <div class="col-xl-9">
+
+                    <div class="row ps-xl-10">
+                        <div class="col-md-3 col-6" data-aos="fade-up" data-aos-duration="1000">
+
+                            <!-- Counter Item Start -->
+                            <div class="counter-item">
+                                <div class="counter-item__icon">
+                                    <img src="assets/images/icon/counter-media-01.png" alt="Icon" width="42" height="48">
+                                </div>
+                                <div class="counter-item__content">
+                                    <span class="counter-item__count">253,085</span>
+                                    <p class="counter-item__text">Students Enrolled</p>
+                                </div>
+                            </div>
+                            <!-- Counter Item End -->
+
+                        </div>
+                        <div class="col-md-3 col-6" data-aos="fade-up" data-aos-duration="1000">
+
+                            <!-- Counter Item Start -->
+                            <div class="counter-item">
+                                <div class="counter-item__icon">
+                                    <img src="assets/images/icon/counter-media-02.png" alt="Icon" width="39" height="48">
+                                </div>
+                                <div class="counter-item__content">
+                                    <span class="counter-item__count">18,099</span>
+                                    <p class="counter-item__text">Classes Completed</p>
+                                </div>
+                            </div>
+                            <!-- Counter Item End -->
+
+                        </div>
+                        <div class="col-md-3 col-6" data-aos="fade-up" data-aos-duration="1000">
+
+                            <!-- Counter Item Start -->
+                            <div class="counter-item">
+                                <div class="counter-item__icon">
+                                    <img src="assets/images/icon/counter-media-03.png" alt="Icon" width="48" height="48">
+                                </div>
+                                <div class="counter-item__content">
+                                    <span class="counter-item__count">88%</span>
+                                    <p class="counter-item__text">Learners report career benefits</p>
+                                </div>
+                            </div>
+                            <!-- Counter Item End -->
+
+                        </div>
+                        <div class="col-md-3 col-6" data-aos="fade-up" data-aos-duration="1000">
+
+                            <!-- Counter Item Start -->
+                            <div class="counter-item">
+                                <div class="counter-item__icon">
+                                    <img src="assets/images/icon/counter-media-04.png" alt="Icon" width="48" height="48">
+                                </div>
+                                <div class="counter-item__content">
+                                    <span class="counter-item__count">4,038</span>
+                                    <p class="counter-item__text">Courses from top instructors</p>
+                                </div>
+                            </div>
+                            <!-- Counter Item End -->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Counter End -->
+
+    <!-- Event Start -->
+    <div class="event-section section-padding-01">
+        <div class="container">
+            <div class="row gy-10 align-items-center">
+                <div class="col-xl-3 col-lg-5 col-md-6 col-sm-7">
+
+                    <!-- Section Title Start -->
+                    <div class="section-title mb-0 pe-lg-8" data-aos="fade-up" data-aos-duration="1000">
+                        <h4 class="section-title__sub-title">EVENTS</h4>
+                        <h2 class="section-title__title-02">Upcoming <br> <mark>Events</mark></h2>
+                        <p>You can show all events here to let people take the chances to get involve.</p>
+                    </div>
+                    <!-- Section Title End -->
+
+                    <div class="section-btn" data-aos="fade-up" data-aos-duration="1000">
+                        <a href="#" class="btn btn-light btn-hover-primary">View all</a>
+                    </div>
+
+                </div>
+
+                <div class="col-xl-9">
+                    <!-- Event Active Start -->
+                    <div class="event-active swiper-button-style" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <!-- Event Item Start -->
+                                    <div class="event-item">
+                                        <div class="event-item__image">
+                                            <a href="#"><img src="assets/images/event/event-thumbnail-10.jpg" alt="event" width="330" height="186"></a>
+                                        </div>
+                                        <div class="event-item__content text-center">
+                                            <span class="event-item__date">August 18, 2022</span>
+                                            <h3 class="event-item__title"><a href="event-details-layout-01.html">Global Education Fall Meeting for Everyone</a></h3>
+                                            <p class="event-item__location"><i class="far fa-map-marker-alt"></i> United States</p>
+                                        </div>
+                                    </div>
+                                    <!-- Event Item End -->
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <!-- Event Item Start -->
+                                    <div class="event-item">
+                                        <div class="event-item__image">
+                                            <a href="#"><img src="assets/images/event/event-thumbnail-04.jpg" alt="event" width="330" height="186"></a>
+                                        </div>
+                                        <div class="event-item__content text-center">
+                                            <span class="event-item__date">November 9, 2022</span>
+                                            <h3 class="event-item__title"><a href="event-details-layout-01.html">London International Conference on Education</a></h3>
+                                            <p class="event-item__location"><i class="far fa-map-marker-alt"></i> London</p>
+                                        </div>
+                                    </div>
+                                    <!-- Event Item End -->
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <!-- Event Item Start -->
+                                    <div class="event-item">
+                                        <div class="event-item__image">
+                                            <a href="#"><img src="assets/images/event/event-thumbnail-01.jpg" alt="event" width="330" height="186"></a>
+                                        </div>
+                                        <div class="event-item__content text-center">
+                                            <span class="event-item__date">December 31, 2022</span>
+                                            <h3 class="event-item__title"><a href="event-details-layout-01.html">Digital Skills: Using Information to Build Business</a></h3>
+                                            <p class="event-item__location"><i class="far fa-map-marker-alt"></i> United Kingdom</p>
+                                        </div>
+                                    </div>
+                                    <!-- Event Item End -->
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <!-- Event Item Start -->
+                                    <div class="event-item">
+                                        <div class="event-item__image">
+                                            <a href="#"><img src="assets/images/event/event-thumbnail-11.jpg" alt="event" width="330" height="186"></a>
+                                        </div>
+                                        <div class="event-item__content text-center">
+                                            <span class="event-item__date">August 23, 2022</span>
+                                            <h3 class="event-item__title"><a href="event-details-layout-01.html">Creating Futures Through Technology Conference</a></h3>
+                                            <p class="event-item__location"><i class="far fa-map-marker-alt"></i> United States</p>
+                                        </div>
+                                    </div>
+                                    <!-- Event Item End -->
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <!-- Event Item Start -->
+                                    <div class="event-item">
+                                        <div class="event-item__image">
+                                            <a href="#"><img src="assets/images/event/event-thumbnail-09.jpg" alt="event" width="330" height="186"></a>
+                                        </div>
+                                        <div class="event-item__content text-center">
+                                            <span class="event-item__date">August 18, 2022</span>
+                                            <h3 class="event-item__title"><a href="event-details-layout-01.html">Digital Arts and Reshaping the Future with AI</a></h3>
+                                            <p class="event-item__location"><i class="far fa-map-marker-alt"></i> Kansas</p>
+                                        </div>
+                                    </div>
+                                    <!-- Event Item End -->
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <!-- Event Item Start -->
+                                    <div class="event-item">
+                                        <div class="event-item__image">
+                                            <a href="#"><img src="assets/images/event/event-thumbnail-08.jpg" alt="event" width="330" height="186"></a>
+                                        </div>
+                                        <div class="event-item__content text-center">
+                                            <span class="event-item__date">August 18, 2022</span>
+                                            <h3 class="event-item__title"><a href="event-details-layout-01.html">Administrators and IT Professionals Strategies and Methods</a></h3>
+                                            <p class="event-item__location"><i class="far fa-map-marker-alt"></i> United States</p>
+                                        </div>
+                                    </div>
+                                    <!-- Event Item End -->
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <!-- Event Item Start -->
+                                    <div class="event-item">
+                                        <div class="event-item__image">
+                                            <a href="#"><img src="assets/images/event/event-thumbnail-07.jpg" alt="event" width="330" height="186"></a>
+                                        </div>
+                                        <div class="event-item__content text-center">
+                                            <span class="event-item__date">November 14, 2022</span>
+                                            <h3 class="event-item__title"><a href="event-details-layout-01.html">Things to Do – Virtual Celebration Brunch and Book Signing</a></h3>
+                                            <p class="event-item__location"><i class="far fa-map-marker-alt"></i> United States</p>
+                                        </div>
+                                    </div>
+                                    <!-- Event Item End -->
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <!-- Event Item Start -->
+                                    <div class="event-item">
+                                        <div class="event-item__image">
+                                            <a href="#"><img src="assets/images/event/event-thumbnail-06.jpg" alt="event" width="330" height="186"></a>
+                                        </div>
+                                        <div class="event-item__content text-center">
+                                            <span class="event-item__date">October 9, 2022</span>
+                                            <h3 class="event-item__title"><a href="event-details-layout-01.html">How to Photograph Events Without Bothering the Guests</a></h3>
+                                            <p class="event-item__location"><i class="far fa-map-marker-alt"></i> United States</p>
+                                        </div>
+                                    </div>
+                                    <!-- Event Item End -->
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-button-next"><i class="fal fa-angle-right"></i></div>
+                        <div class="swiper-button-prev"><i class="fal fa-angle-left"></i></div>
+                    </div>
+                    <!-- Event Active End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Event End -->
+
+    <!-- Testimonial Start -->
+    <div class="testimonial-section bg-color-01 section-padding-01">
+        <div class="container">
+
+            <!-- Section Title Start -->
+            <div class="section-title text-center" data-aos="fade-up" data-aos-duration="1000">
+                <h4 class="section-title__sub-title">TESTIMONIALS</h4>
+                <h2 class="section-title__title-02">See What Our Students Have To Say</h2>
+            </div>
+            <!-- Section Title End -->
+
+            <!-- Testimonial Start -->
+            <div class="testimonial-active-02" data-aos="fade-up" data-aos-duration="1000">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <!-- Testimonial Item Start -->
+                            <div class="testimonial-item-02">
+
+                                <div class="testimonial-image">
+                                    <img src="assets/images/avatar/avatar-01.jpg" alt="Avatar" width="70" height="70">
+                                </div>
+
+                                <div class="testimonial-caption-02">
+                                    <h3 class="testimonial-caption-02__title">Great quality!</h3>
+                                    <p>I wanted to place a review since their support helped me within a day or so, which is nice! Thanks and 5 stars!</p>
+                                </div>
+
+                                <div class="testimonial-info-02__caption">
+                                    <h5 class="testimonial-info-02__name">Oliver Beddows</h5>
+                                    <p class="testimonial-info-02__designation">/ Designer, Manchester</p>
+                                </div>
+
+                            </div>
+                            <!-- Testimonial Item End -->
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Testimonial Item Start -->
+                            <div class="testimonial-item-02">
+
+                                <div class="testimonial-image">
+                                    <img src="assets/images/avatar/avatar-02.jpg" alt="Avatar" width="70" height="70">
+                                </div>
+
+                                <div class="testimonial-caption-02">
+                                    <h3 class="testimonial-caption-02__title">Code Qualityity!</h3>
+                                    <p>I wanted to place a review since their support helped me within a day or so, which is nice! Thanks and 5 stars!</p>
+                                </div>
+
+                                <div class="testimonial-info-02__caption">
+                                    <h5 class="testimonial-info-02__name">Oliver Beddows</h5>
+                                    <p class="testimonial-info-02__designation">/ Designer, Manchester</p>
+                                </div>
+
+                            </div>
+                            <!-- Testimonial Item End -->
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Testimonial Item Start -->
+                            <div class="testimonial-item-02">
+
+                                <div class="testimonial-image">
+                                    <img src="assets/images/avatar/avatar-03.jpg" alt="Avatar" width="70" height="70">
+                                </div>
+
+                                <div class="testimonial-caption-02">
+                                    <h3 class="testimonial-caption-02__title">Customer Support</h3>
+                                    <p>I wanted to place a review since their support helped me within a day or so, which is nice! Thanks and 5 stars!</p>
+                                </div>
+
+                                <div class="testimonial-info-02__caption">
+                                    <h5 class="testimonial-info-02__name">Oliver Beddows</h5>
+                                    <p class="testimonial-info-02__designation">/ Designer, Manchester</p>
+                                </div>
+
+                            </div>
+                            <!-- Testimonial Item End -->
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Testimonial Item Start -->
+                            <div class="testimonial-item-02">
+
+                                <div class="testimonial-image">
+                                    <img src="assets/images/avatar/avatar-04.jpg" alt="Avatar" width="70" height="70">
+                                </div>
+
+                                <div class="testimonial-caption-02">
+                                    <h3 class="testimonial-caption-02__title">Nice Design </h3>
+                                    <p>I wanted to place a review since their support helped me within a day or so, which is nice! Thanks and 5 stars!</p>
+                                </div>
+
+                                <div class="testimonial-info-02__caption">
+                                    <h5 class="testimonial-info-02__name">Oliver Beddows</h5>
+                                    <p class="testimonial-info-02__designation">/ Designer, Manchester</p>
+                                </div>
+
+                            </div>
+                            <!-- Testimonial Item End -->
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Testimonial Item Start -->
+                            <div class="testimonial-item-02">
+
+                                <div class="testimonial-image">
+                                    <img src="assets/images/avatar/avatar-01.jpg" alt="Avatar" width="70" height="70">
+                                </div>
+
+                                <div class="testimonial-caption-02">
+                                    <h3 class="testimonial-caption-02__title">Great quality!</h3>
+                                    <p>I wanted to place a review since their support helped me within a day or so, which is nice! Thanks and 5 stars!</p>
+                                </div>
+
+                                <div class="testimonial-info-02__caption">
+                                    <h5 class="testimonial-info-02__name">Oliver Beddows</h5>
+                                    <p class="testimonial-info-02__designation">/ Designer, Manchester</p>
+                                </div>
+
+                            </div>
+                            <!-- Testimonial Item End -->
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Testimonial Item Start -->
+                            <div class="testimonial-item-02">
+
+                                <div class="testimonial-image">
+                                    <img src="assets/images/avatar/avatar-02.jpg" alt="Avatar" width="70" height="70">
+                                </div>
+
+                                <div class="testimonial-caption-02">
+                                    <h3 class="testimonial-caption-02__title">Code Quality</h3>
+                                    <p>I wanted to place a review since their support helped me within a day or so, which is nice! Thanks and 5 stars!</p>
+                                </div>
+
+                                <div class="testimonial-info-02__caption">
+                                    <h5 class="testimonial-info-02__name">Oliver Beddows</h5>
+                                    <p class="testimonial-info-02__designation">/ Designer, Manchester</p>
+                                </div>
+
+                            </div>
+                            <!-- Testimonial Item End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial End -->
+
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Blog End -->
+    <div class="blog section section-padding-01">
+        <div class="container">
+            <div class="row gy-10">
+                <div class="col-xl-3">
+
+                    <!-- Section Title Start -->
+                    <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
+                        <h4 class="section-title__sub-title">BLOG UPDATE</h4>
+                        <h2 class="section-title__title-02">EduMall's News <br> And <mark>Blogs</mark></h2>
+                    </div>
+                    <!-- Section Title End -->
+
+                    <!-- list Blog Start -->
+                    <div class="list-blog">
+                        <ul class="list-blog__items" data-aos="fade-up" data-aos-duration="1000">
+                            <li>
+                                <h3 class="list-blog__title"><a href="blog-details-right-sidebar.html">4 Learning Management System Design Tips For Better eLearning</a></h3>
+                            </li>
+                            <li>
+                                <h3 class="list-blog__title"><a href="blog-details-right-sidebar.html">The Importance Of Intrinsic Motivation for Students</a></h3>
+                            </li>
+                            <li>
+                                <h3 class="list-blog__title"><a href="blog-details-right-sidebar.html">A Better Alternative To Grading Student Writing</a></h3>
+                            </li>
+                            <li>
+                                <h3 class="list-blog__title"><a href="blog-details-right-sidebar.html">It’s Time To Think Differently About Writing In The Classroom</a></h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- list Blog End -->
+
+                </div>
+                <div class="col-xl-9">
+                    <div class="row gy-6">
+                        <div class="col-lg-4 col-md-6">
+                            <!-- Blog Item Start -->
+                            <div class="blog-item" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="blog-item__image">
+                                    <a href="blog-details-right-sidebar.html"><img src="assets/images/blog/blog-10.jpg" alt="Blog" width="330" height="179"></a>
+                                </div>
+                                <div class="blog-item__content">
+                                    <div class="blog-item__meta">
+                                        <span class="meta-action"><i class="far fa-calendar"></i> August 10, 2022</span>
+                                        <span class="meta-action"><i class="far fa-eye"></i> 4,036 views</span>
+                                    </div>
+                                    <h3 class="blog-item__title"><a href="blog-details-right-sidebar.html">Back To School Social-Emotional Basics: Relationship, Rhythm, Release</a></h3>
+                                    <p>As our elementary students head back to school in person, …</p>
+                                    <a class="blog-item__more btn btn-light btn-hover-white" href="blog-details-right-sidebar.html">Read More</a>
+                                </div>
+                            </div>
+                            <!-- Blog Item End -->
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <!-- Blog Item Start -->
+                            <div class="blog-item" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="blog-item__image">
+                                    <a href="blog-details-right-sidebar.html"><img src="assets/images/blog/blog-11.jpg" alt="Blog" width="330" height="179"></a>
+                                </div>
+                                <div class="blog-item__content">
+                                    <div class="blog-item__meta">
+                                        <span class="meta-action"><i class="far fa-calendar"></i> August 10, 2022</span>
+                                        <span class="meta-action"><i class="far fa-eye"></i> 370 views</span>
+                                    </div>
+                                    <h3 class="blog-item__title"><a href="blog-details-right-sidebar.html">The Challenge Of Global Learning In Public Education</a></h3>
+                                    <p>As our elementary students head back to school in person, …</p>
+                                    <a class="blog-item__more btn btn-light btn-hover-white" href="blog-details-right-sidebar.html">Read More</a>
+                                </div>
+                            </div>
+                            <!-- Blog Item End -->
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <!-- Blog Item Start -->
+                            <div class="blog-item" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="blog-item__image">
+                                    <a href="blog-details-right-sidebar.html"><img src="assets/images/blog/blog-12.jpg" alt="Blog" width="330" height="179"></a>
+                                </div>
+                                <div class="blog-item__content">
+                                    <div class="blog-item__meta">
+                                        <span class="meta-action"><i class="far fa-calendar"></i> August 10, 2022</span>
+                                        <span class="meta-action"><i class="far fa-eye"></i> 287 views</span>
+                                    </div>
+                                    <h3 class="blog-item__title"><a href="blog-details-right-sidebar.html">Exactly How Technology Can Make Reading Better</a></h3>
+                                    <p>As our elementary students head back to school in person, …</p>
+                                    <a class="blog-item__more btn btn-light btn-hover-white" href="blog-details-right-sidebar.html">Read More</a>
+                                </div>
+                            </div>
+                            <!-- Blog Item End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+    <!-- Footer Start -->
+    <div class="footer-section">
+
+        <!-- Footer Copyright Area End -->
+        <div class="footer-copyright footer-bg-2">
+            <div class="container">
+                <div class="copyright-wrapper-02 text-center">
+                    <p class="footer-widget__copyright">&copy; 2022 <span> EduMall </span> Made with <i class="fa fa-heart"></i> by <a href="https://1.envato.market/c/417168/275988/4415?subId1=hastheme&amp;subId2=demo&amp;subId3=https%3A%2F%2Fthemeforest.net%2Fuser%2Fbootxperts%2Fportfolio&amp;u=https%3A%2F%2Fthemeforest.net%2Fuser%2Fbootxperts%2Fportfolio">BootXperts</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Copyright Area End -->
+
+    </div>
+    <!-- Footer End -->
+
+    <!--Back To Start-->
+    <button id="backBtn" class="back-to-top backBtn">
+        <i class="arrow-top fal fa-long-arrow-up"></i>
+        <i class="arrow-bottom fal fa-long-arrow-up"></i>
+    </button>
+
+{% endblock %}
