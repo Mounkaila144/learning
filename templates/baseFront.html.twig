@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>EduMall - LMS & e-Learning Platform Template</title>
+        <meta name="robots" content="noindex, follow" />
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('./assets/images/favicon.png') }}">
+
+        <!-- CSS (Font, Vendor, Icon, Plugins & Style CSS files) -->
+
+        <!-- Font CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+
+        <!-- Vendor CSS (Bootstrap & Icon Font) -->
+        <link rel="stylesheet" href="{{ asset('./assets/css/vendor/fontawesome-all.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('./assets/css/vendor/edumall-icon.css') }}">
+        <link rel="stylesheet" href="{{ asset('./assets/css/vendor/bootstrap.min.css') }}">
+
+        <!-- Plugins CSS (All Plugins Files) -->
+        <link rel="stylesheet" href="{{ asset('./assets/css/plugins/aos.css') }}">
+        <link rel="stylesheet" href="{{ asset('./assets/css/plugins/swiper-bundle.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('./assets/css/plugins/perfect-scrollbar.css') }}">
+        <link rel="stylesheet" href="{{ asset('./assets/css/plugins/jquery.powertip.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('./assets/css/plugins/glightbox.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('./assets/css/plugins/flatpickr.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('./assets/css/plugins/ion.rangeSlider.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('./assets/css/plugins/select2.min.css') }}">
+
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="{{ asset('./assets/css/style.css') }}">
+
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+
+    <main class="main-wrapper">
+        {% include "front/navbar.html.twig" %}
+        {% block body %}{% endblock %}
+    </main>
+    {% block login %}{% endblock %}
+
+
+    <!-- Log In Modal Start -->
+    <div class="modal fade" id="registerModal">
+        <div class="modal-dialog modal-dialog-centered modal-register">
+
+            <!-- Modal Wrapper Start -->
+            <div class="modal-wrapper">
+                <button class="modal-close" data-bs-dismiss="modal"><i class="fal fa-times"></i></button>
+
+                <!-- Modal Content Start -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Sign Up</h5>
+                        <p class="modal-description">Already have an account? <button data-bs-toggle="modal" data-bs-target="#loginModal">Log in</button></p>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="#">
+                            <div class="row gy-5">
+                                <div class="col-md-6">
+                                    <div class="modal-form">
+                                        <label class="form-label">First Name</label>
+                                        <input type="text" class="form-control" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="modal-form">
+                                        <label class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="modal-form">
+                                        <label class="form-label">Username</label>
+                                        <input type="text" class="form-control" placeholder="username">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="modal-form">
+                                        <label class="form-label">Email</label>
+                                        <input type="text" class="form-control" placeholder="Your Email">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="modal-form">
+                                        <label class="form-label">Password</label>
+                                        <input type="password" class="form-control" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="modal-form">
+                                        <label class="form-label">Re-Enter Password</label>
+                                        <input type="password" class="form-control" placeholder="Re-Enter Password">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="modal-form form-check">
+                                        <input type="checkbox" id="privacy">
+                                        <label for="privacy">Accept the Terms and Privacy Policy</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="modal-form">
+                                        <button class="btn btn-primary btn-hover-secondary w-100">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <!-- Modal Content End -->
+
+            </div>
+            <!-- Modal Wrapper End -->
+
+        </div>
+    </div>
+    <!-- Log In Modal End -->
+
+    <!-- Edumall Demo Option Start -->
+    <div class="edumall-demo-option">
+
+        <div class="edumall-demo-option__toolbar">
+            <button class="toolbar-action demo-open" data-bs-tooltip="tooltip" data-bs-placement="left" title="Select Demo"><i class="far fa-ruler-triangle"></i></button>
+            <a class="toolbar-action" href="https://hasthemes.com/contact-us/" data-bs-tooltip="tooltip" data-bs-placement="left" title="Support Channel"><i class="far fa-life-ring"></i></a>
+            <a class="toolbar-action" href="https://1.envato.market/c/417168/275988/4415?subId1=hastheme&amp;subId2=demo&amp;subId3=https%3A%2F%2Fthemeforest.net%2Fuser%2Fbootxperts%2Fportfolio&amp;u=https%3A%2F%2Fthemeforest.net%2Fuser%2Fbootxperts%2Fportfolio" data-bs-tooltip="tooltip" data-bs-placement="left" title="Purchase EduMall"><i class="far fa-shopping-cart"></i></a>
+        </div>
+
+        <div class="edumall-demo-option__panel">
+
+            <div class="edumall-demo-option__header">
+                <h5 class="edumall-demo-option__title">EduMall - Professional LMS Education Center HTML Template</h5>
+                <a class="edumall-demo-option__btn btn btn-primary btn-hover-secondary" href="https://1.envato.market/c/417168/275988/4415?subId1=hastheme&amp;subId2=demo&amp;subId3=https%3A%2F%2Fthemeforest.net%2Fuser%2Fbootxperts%2Fportfolio&amp;u=https%3A%2F%2Fthemeforest.net%2Fuser%2Fbootxperts%2Fportfolio"><i class="far fa-shopping-cart"></i> Buy Now</a>
+            </div>
+
+            <div class="edumall-demo-option__body">
+                <!-- <div class="edumall-demo-option-item">
+                <a href="" data-bs-tooltip="tooltip" data-bs-placement="top" title="Landing Page">
+                    <img src="assets/images/demo/landing.jpg" alt="">
+                </a>
+            </div> -->
+                <div class="edumall-demo-option-item">
+                    <a href="index-main.html" data-bs-tooltip="tooltip" data-bs-placement="top" title="Main Demo">
+                        <img src="assets/images/demo/home-01.jpg" alt="Home" width="130" height="158">
+                    </a>
+                </div>
+                <div class="edumall-demo-option-item">
+                    <a href="index-course-hub.html" data-bs-tooltip="tooltip" data-bs-placement="top" title="Course Hub">
+                        <img src="assets/images/demo/home-02.jpg" alt="Home" width="130" height="158">
+                    </a>
+                </div>
+                <div class="edumall-demo-option-item">
+                    <a href="index-online-academy.html" data-bs-tooltip="tooltip" data-bs-placement="top" title="Online Academy">
+                        <img src="assets/images/demo/home-03.jpg" alt="Home" width="130" height="158">
+                    </a>
+                </div>
+                <div class="edumall-demo-option-item">
+                    <a href="index-education-center.html" data-bs-tooltip="tooltip" data-bs-placement="top" title="Education Center">
+                        <img src="assets/images/demo/home-04.jpg" alt="Home" width="130" height="158">
+                    </a>
+                </div>
+                <div class="edumall-demo-option-item">
+                    <a href="index-university.html" data-bs-tooltip="tooltip" data-bs-placement="top" title="University">
+                        <img src="assets/images/demo/home-05.jpg" alt="Home" width="130" height="158">
+                    </a>
+                </div>
+                <div class="edumall-demo-option-item">
+                    <a href="index-language-academic.html" data-bs-tooltip="tooltip" data-bs-placement="top" title="Language Academic">
+                        <img src="assets/images/demo/home-06.jpg" alt="Home" width="130" height="158">
+                    </a>
+                </div>
+                <div class="edumall-demo-option-item">
+                    <a href="index-single-instructor.html" data-bs-tooltip="tooltip" data-bs-placement="top" title="Single Instructor">
+                        <img src="assets/images/demo/home-07.jpg" alt="Home" width="130" height="158">
+                    </a>
+                </div>
+                <div class="edumall-demo-option-item">
+                    <a href="index-dev.html" data-bs-tooltip="tooltip" data-bs-placement="top" title="Dev">
+                        <img src="assets/images/demo/home-08.jpg" alt="Home" width="130" height="158">
+                    </a>
+                </div>
+                <div class="edumall-demo-option-item">
+                    <a href="index-online-art.html" data-bs-tooltip="tooltip" data-bs-placement="top" title="Online Art">
+                        <img src="assets/images/demo/home-09.jpg" alt="Home" width="130" height="158">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Edumall Demo Option End -->
+
+        <!-- JS Vendor, Plugins & Activation Script Files -->
+
+        <!-- Vendors JS -->
+        <script src="{{ asset('./assets/js/vendor/modernizr-3.11.7.min.js') }}"></script>
+        <script src="{{ asset('./assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
+        <script src="{{ asset('./assets/js/vendor/jquery-migrate-3.3.2.min.js') }}"></script>
+        <script src="{{ asset('./assets/js/vendor/bootstrap.bundle.min.js') }}"></script>
+
+        <!-- Plugins JS -->
+        <script src="{{ asset('./assets/js/plugins/aos.js') }}"></script>
+        <script src="{{ asset('./assets/js/plugins/parallax.js') }}"></script>
+        <script src="{{ asset('./assets/js/plugins/swiper-bundle.min.js') }}"></script>
+        <script src="{{ asset('./assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
+        <script src="{{ asset('./assets/js/plugins/jquery.powertip.min.js') }}"></script>
+        <script src="{{ asset('./assets/js/plugins/nice-select.min.js') }}"></script>
+        <script src="{{ asset('./assets/js/plugins/glightbox.min.js') }}"></script>
+        <script src="{{ asset('./assets/js/plugins/jquery.sticky-kit.min.js') }}"></script>
+        <script src="{{ asset('./assets/js/plugins/imagesloaded.pkgd.min.js') }}"></script>
+        <script src="{{ asset('./assets/js/plugins/masonry.pkgd.min.js') }}"></script>
+        <script src="{{ asset('./assets/js/plugins/flatpickr.js') }}"></script>
+        <script src="{{ asset('./assets/js/plugins/range-slider.js') }}"></script>
+        <script src="{{ asset('./assets/js/plugins/select2.min.js') }}"></script>
+
+
+        <!-- Activation JS -->
+        <script src="{{ asset('./assets/js/main.js') }}"></script>
+
+    </body>
+</html>

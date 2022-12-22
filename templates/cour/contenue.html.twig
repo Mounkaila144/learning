@@ -1,0 +1,17 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Contenue{% endblock %}
+
+{% block body %}
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title mb-0">Contenue</h3>
+    </div>
+    <div class="card-body">
+                    {{ contenue|raw }}
+    </div>
+</div>
+
+    {{ encore_entry_script_tags('datatable') }}
+
+{% endblock %}
