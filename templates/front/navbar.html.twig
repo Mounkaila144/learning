@@ -10,23 +10,23 @@
 
                 <div class="header-top-bar-wrap__info">
                     <ul class="header-top-bar-wrap__info-list header-top-bar-wrap__info-list-02">
-                        <li><a href="tel:+8819906886"><i class="fas fa-phone"></i> <span class="info-text">(+227) 94203434</span></a></li>
-                        <li><a href="mailto:agency@example.com"><i class="far fa-envelope"></i> <span class="info-text">ptr@gmail.com</span></a></li>
+                        <li><a href="tel:+22794203434"><i class="fas fa-phone"></i> <span class="info-text">(+227) 94203434</span></a></li>
+                        <li><a href="contact@ptr-niger.com"><i class="far fa-envelope"></i> <span class="info-text">contact@ptr-niger.com</span></a></li>
                     </ul>
                 </div>
 
                 <div class="header-top-bar-wrap__info d-sm-flex">
                     {% if is_granted('ROLE_USER') %}
-                        <a class="btn btn-primary" href="{{ path('app_logout') }}">Deconnexion</a>
+                        <a class="btn btn-primary" href="{{ path('app_logout') }}">Déconnexion</a>
                     {% else %}
                         <a class="btn btn-primary" style="" href="{{path('app_login') }}">Connexion</a>
-                        <a class="btn btn-primary" style="" href="{{path('app_register_user') }}">Cree un compte</a>
+                        <a class="btn btn-primary" style="" href="{{path('app_register_user') }}">Creer un compte</a>
                     {% endif %}
                     <ul class="header-top-bar-wrap__info-social header-top-bar-wrap__info-social-02">
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="www.facebook.com/ptrniger" target ="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href ="https://instagram.com/ptr_niger" target="_blank" ><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/76802154" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                     </ul>
                 </div>
 
@@ -45,7 +45,7 @@
 
                 <!-- Header Logo Start -->
                 <div class="header-logo">
-                    <a class="header-logo__logo" href="index-main.html"><img src="assets/images/dark-logo.png" width="296" height="64" alt="Logo"></a>
+                    <a class="header-logo__logo" href="index-main.html"><img src="assets/images/LogoPTR-Niger-V2_Propos-Correction2.gif" width="296" height="64" alt="Logo"></a>
                 </div>
                 <!-- Header Logo End -->
 
@@ -56,171 +56,71 @@
                     <div class="header-navigation d-none d-xl-block">
                         <nav class="menu-primary">
                             <ul class="menu-primary__container">
-                                <li><a class="active" href="#"><span>Menu</span></a>
+                                <li><a class="active" href="#"><span>Accueil</span></a>
 
-                                    <ul class="mega-menu">
-                                        <li>
-                                            <!-- Mega Menu Content Start -->
-                                            <div class="mega-menu-content">
-                                                <div class="row">
-                                                    <div class="col-xl-3">
-                                                        <div class="menu-content-list">
-                                                            <a href="index-main.html" class="menu-content-list__link">Main Demo <span class="badge hot">Hot</span></a>
-                                                            <a href="index-course-hub.html" class="menu-content-list__link">Course Hub</a>
-                                                            <a href="index-online-academy.html" class="menu-content-list__link">Online Academy <span class="badge hot">Hot</span></a>
-                                                            <a href="index-university.html" class="menu-content-list__link">University</a>
-                                                            <a href="index-education-center.html" class="menu-content-list__link">Education Center <span class="badge hot">Hot</span></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-3">
-                                                        <div class="menu-content-list">
-                                                            <a href="index-language-academic.html" class="menu-content-list__link">Language Academic</a>
-                                                            <a href="index-single-instructor.html" class="menu-content-list__link">Single Instructor</a>
-                                                            <a href="index-dev.html" class="menu-content-list__link">Dev <span class="badge new">New</span></a>
-                                                            <a href="index-online-art.html" class="menu-content-list__link">Online Art <span class="badge new">New</span></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-6">
-                                                        <div class="menu-content-banner" style="background-image: url(assets/images/home-megamenu-bg.jpg);">
-                                                            <h4 class="menu-content-banner__title">Achieve Your Goals With EduMall</h4>
-                                                            <a href="#" class="menu-content-banner__btn btn btn-primary btn-hover-secondary">Purchase now</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- Mega Menu Content Start -->
-                                        </li>
-                                    </ul>
+
 
 
 
 
                                 </li>
                                 <li>
-                                    <a href="#"><span>Courses</span></a>
+                                    <a href="#"><span>Formations</span></a>
                                     <ul class="sub-menu">
-                                        <li><a href="course-grid-01.html"><span>Grid Basic Layout</span></a></li>
-                                        <li><a href="course-grid-02.html"><span>Grid Modern Layout</span></a></li>
-                                        <li><a href="course-grid-left-sidebar.html"><span>Grid Left Sidebar</span></a></li>
-                                        <li><a href="course-grid-right-sidebar.html"><span>Grid Right Sidebar</span></a></li>
-                                        <li><a href="course-list.html"><span>List Basic Layout</span></a></li>
-                                        <li><a href="course-list-left-sidebar.html"><span>List Left Sidebar</span></a></li>
-                                        <li><a href="course-list-right-sidebar.html"><span>List Right Sidebar</span></a></li>
-                                        <li><a href="course-category.html"><span>Category Page</span></a></li>
+                                        <li><a href="course-grid-01.html"><span>InformaTIC bureauTIC</span></a></li>
+                                        <li><a href="course-grid-02.html"><span>MasterClass PhotoShop</span></a></li>
+                                        <li><a href="course-grid-left-sidebar.html"><span>MasterClass Illustrator</span></a></li>
+                                        <li><a href="course-grid-right-sidebar.html"><span>WebCamp</span></a></li>
+                                        <li><a href="course-list.html"><span>DataCamp (KoboToolBox)</span></a></li>
+                                        <li><a href="course-list-left-sidebar.html"><span>Marketing Digutal</span></a></li>
+                                        <li><a href="course-list-right-sidebar.html"><span>Design Graphic</span></a></li>
+                                        <li><a href="course-category.html"><span>Montage Vidéo</span></a></li>
                                         <li>
-                                            <a href="#"><span>Single Layout</span></a>
+                                            <a href="#"><span>Autres</span></a>
                                             <ul class="sub-menu">
-                                                <li><a href="course-single-layout-01.html"><span>Layout 01</span></a></li>
-                                                <li><a href="course-single-layout-02.html"><span>Layout 02</span></a></li>
-                                                <li><a href="course-single-layout-03.html"><span>Layout 03</span></a></li>
-                                                <li><a href="course-single-layout-04.html"><span>Layout 04</span></a></li>
+                                                <li><a href="course-single-layout-01.html"><span>CCNA</span></a></li>
+                                                <li><a href="course-single-layout-02.html"><span>CCNP</span></a></li>
+                                                <li><a href="course-single-layout-03.html"><span>Windows Server 2019</span></a></li>
+                                                <li><a href="course-single-layout-04.html"><span>CyberOps</span></a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
+
+                                <li>
+                                    <a href="#"> <span>Nos Services</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="blog-grid-01.html"><span>Impression tout support</span></a></li>
+                                        <li><a href="blog-grid-02.html"><span>Site Web</span></a></li>
+                                        <li><a href="blog-grid-left-sidebar.html"><span>Réseaux & Systèmes</span></a></li>
+                                        <li><a href="blog-grid-right-sidebar.html"><span>Infographie</span></a></li>
+                                        <li><a href="blog-list-style-01.html"><span>Maintenaces Informatiques</span></a></li>
+                                        <li><a href="blog-list-style-02.html"><span>Installations</span></a></li>
+                                        <li>
+                                            <a href="#"><span>Logiciels</span></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="blog-details-left-sidebar.html"><span>Vente de Licences</span></a></li>
+                                                <li><a href="blog-details-right-sidebar.html"><span>Logiciels sur Mésures</span></a></li>
+                                                <li><a href="blog-details.html"><span>Création</span></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
                                 <li>
                                     <a href="#"><span>Blog</span></a>
                                     <ul class="sub-menu">
-                                        <li><a href="blog-grid-01.html"><span>Grid Basic Layout</span></a></li>
-                                        <li><a href="blog-grid-02.html"><span>Grid Wide</span></a></li>
-                                        <li><a href="blog-grid-left-sidebar.html"><span>Grid Left Sidebar</span></a></li>
-                                        <li><a href="blog-grid-right-sidebar.html"><span>Grid Right Sidebar</span></a></li>
-                                        <li><a href="blog-list-style-01.html"><span>List Layout 01</span></a></li>
-                                        <li><a href="blog-list-style-02.html"><span>List Layout 02</span></a></li>
+                                        <li><a href="blog-list-style-02.html"><span>Voir les articles</span></a></li>
                                         <li>
-                                            <a href="#"><span>Single Layouts</span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog-details-left-sidebar.html"><span>Left Sidebar</span></a></li>
-                                                <li><a href="blog-details-right-sidebar.html"><span>Right Sidebar</span></a></li>
-                                                <li><a href="blog-details.html"><span>No Sidebar</span></a></li>
-                                            </ul>
+                                            <a href="#"><span>Partager votre avis</span></a>
                                         </li>
                                     </ul>
                                 </li>
+
                                 <li>
-                                    <a href="#"><span>Pages</span></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="become-an-instructor.html"><span>Become an Instructor</span></a></li>
-                                        <li>
-                                            <a href="instructors.html"><span>Instructor</span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="dashboard-my-courses.html"><span>My Courses</span></a></li>
-                                                <li><a href="dashboard-announcement.html"><span>Announcements</span></a></li>
-                                                <li><a href="dashboard-withdraw.html"><span>Withdrawals</span></a></li>
-                                                <li><a href="dashboard-quiz-attempts.html"><span>Quiz Attempts</span></a></li>
-                                                <li><a href="dashboard-question-answer.html"><span>Question & Answer</span></a></li>
-                                                <li><a href="dashboard-assignments.html"><span>Assignments</span></a></li>
-                                                <li><a href="dashboard-students.html"><span>My Students</span></a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="about.html"><span>About us</span></a></li>
-                                        <li><a href="about-02.html"><span>About us 02</span></a></li>
-                                        <li><a href="contact-us.html"><span>Contact us</span></a></li>
-                                        <li><a href="contact-us-02.html"><span>Contact us 02</span></a></li>
-                                        <li><a href="membership-plans.html"><span>Membership plans</span></a></li>
-                                        <li><a href="faqs.html"><span>FAQs</span></a></li>
-                                        <li><a href="404-page.html"><span>404 Page</span></a></li>
-                                        <li>
-                                            <a href="#"><span>Dashboard</span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="dashboard-index.html"><span>Dashboard</span></a></li>
-                                                <li><a href="dashboard-student-index.html"><span>Dashboard Student</span></a></li>
-                                                <li><a href="dashboard-profile.html"><span>My Profile</span></a></li>
-                                                <li><a href="dashboard-all-course.html"><span>Enrolled Courses</span></a></li>
-                                                <li><a href="dashboard-wishlist.html"><span>Wishlist</span></a></li>
-                                                <li><a href="dashboard-reviews.html"><span>Reviews</span></a></li>
-                                                <li><a href="dashboard-my-quiz-attempts.html"><span>My Quiz Attempts</span></a></li>
-                                                <li><a href="dashboard-purchase-history.html"><span>Purchase History</span></a></li>
-                                                <li><a href="dashboard-settings.html"><span>Settings</span></a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                    <a href="#"> <span>Contacts</span></a>
                                 </li>
-                                <li>
-                                    <a href="#"><span>Features</span></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#"><span>Events</span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="event-grid-sidebar.html"><span>Event Listing 01</span></a></li>
-                                                <li><a href="event-grid.html"><span>Event Listing 02</span></a></li>
-                                                <li><a href="event-list.html"><span>Event Listing 03</span></a></li>
-                                                <li><a href="event-list-sidebar.html"><span>Event Listing 04</span></a></li>
-                                                <li>
-                                                    <a href="#"><span>Single Layouts</span></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="event-details-layout-01.html"><span>Layout 01</span></a></li>
-                                                        <li><a href="event-details-layout-02.html"><span>Layout 02</span></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#"><span>Shop</span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="shop-default.html"><span>Shop – Default</span></a></li>
-                                                <li><a href="shop-left-sidebar.html"><span>Shop – Left Sidebar</span></a></li>
-                                                <li><a href="shop-right-sidebar.html"><span>Shop – Right Sidebar</span></a></li>
-                                                <li><a href="my-account.html"><span>My account</span></a></li>
-                                                <li><a href="wishlist.html"><span>Wishlist</span></a></li>
-                                                <li><a href="cart.html"><span>Cart</span></a></li>
-                                                <li><a href="cart-empty.html"><span>Cart Empty</span></a></li>
-                                                <li><a href="checkout.html"><span>Checkout</span></a></li>
-                                                <li>
-                                                    <a href="#"><span>Single Layouts</span></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="shop-single-list-left-sidebar.html"><span>List – Left Sidebar</span></a></li>
-                                                        <li><a href="shop-single-list-right-sidebar.html"><span>List – Right Sidebar</span></a></li>
-                                                        <li><a href="shop-single-list-no-sidebar.html"><span>List – No Sidebar</span></a></li>
-                                                        <li><a href="shop-single-tab-left-sidebar.html"><span>Tabs – Left Sidebar</span></a></li>
-                                                        <li><a href="shop-single-tab-right-sidebar.html"><span>Tabs – Right Sidebar</span></a></li>
-                                                        <li><a href="shop-single-tab-no-sidebar.html"><span>Tabs – No Sidebar</span></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="zoom-meetings.html"><span>Zoom Meetings</span></a></li>
-                                        <li><a href="zoom-meetings-single.html"><span>Zoom Meeting Single</span></a></li>
-                                    </ul>
-                                </li>
+
 
 
 
@@ -243,67 +143,7 @@
                     </div>
                     <!-- Header Navigation End -->
 
-                    <!-- Header Mini Cart Start -->
-                    <div class="header-action">
-                        <a href="#" class="header-action__btn">
-                            <i class="far fa-shopping-cart"></i>
-                            <span class="header-action__number">3</span>
-                        </a>
 
-                        <!-- Header Mini Cart Start -->
-                        <div class="header-mini-cart">
-
-                            <!-- Header Mini Cart Product List Start -->
-                            <ul class="header-mini-cart__product-list ">
-                                <li class="header-mini-cart__item">
-                                    <a href="#" class="header-mini-cart__close"></a>
-                                    <div class="header-mini-cart__thumbnail">
-                                        <a href="shop-single-list-left-sidebar.html"><img src="assets/images/product/product-1.png" alt="Product" width="80" height="93"></a>
-                                    </div>
-                                    <div class="header-mini-cart__caption">
-                                        <h3 class="header-mini-cart__name"><a href="shop-single-list-left-sidebar.html">Awesome for Websites</a></h3>
-                                        <span class="header-mini-cart__quantity">1 × <strong class="amount">$49</strong><span class="separator">.00</span></span>
-                                    </div>
-                                </li>
-                                <li class="header-mini-cart__item">
-                                    <a href="#" class="header-mini-cart__close"></a>
-                                    <div class="header-mini-cart__thumbnail">
-                                        <a href="shop-single-list-left-sidebar.html"><img src="assets/images/product/product-2.png" alt="Product" width="80" height="93"></a>
-                                    </div>
-                                    <div class="header-mini-cart__caption">
-                                        <h3 class="header-mini-cart__name"> <a href="shop-single-list-left-sidebar.html">Awesome for Websites</a></h3>
-                                        <span class="header-mini-cart__quantity">1 × <strong class="amount">$49</strong><span class="separator">.00</span></span>
-                                    </div>
-                                </li>
-                                <li class="header-mini-cart__item">
-                                    <a href="#" class="header-mini-cart__close"></a>
-                                    <div class="header-mini-cart__thumbnail">
-                                        <a href="shop-single-list-left-sidebar.html"><img src="assets/images/product/product-3.png" alt="Product" width="80" height="93"></a>
-                                    </div>
-                                    <div class="header-mini-cart__caption">
-                                        <h3 class="header-mini-cart__name"> <a href="shop-single-list-left-sidebar.html">Awesome for Websites</a></h3>
-                                        <span class="header-mini-cart__quantity">1 × <strong class="amount">$49</strong><span class="separator">.00</span></span>
-                                    </div>
-                                </li>
-                            </ul>
-                            <!-- Header Mini Cart Product List End -->
-
-                            <div class="header-mini-cart__footer">
-                                <div class="header-mini-cart__total">
-                                    <p class="header-mini-cart__label">Total:</p>
-                                    <p class="header-mini-cart__value">$445<span class="separator">.99</span></p>
-                                </div>
-                                <div class="header-mini-cart__btn">
-                                    <a href="cart.html" class="btn btn-primary btn-hover-secondary">View cart</a>
-                                    <a href="checkout.html" class="btn btn-primary btn-hover-secondary">Checkout</a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- Header Mini Cart End -->
-
-                    </div>
-                    <!-- Header Mini Cart End -->
 
                     <!-- Header Mobile Toggle Start -->
                     <div class="header-toggle">
@@ -335,14 +175,14 @@
 
             <!-- Slider Caption Start -->
             <div class="slider-caption-03 text-center" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="slider-caption-03__main-title">Formation Chez<mark>PTR-Niger</mark></h2>
+                <h2 class="slider-caption-03__main-title">Bienvenue Chez<mark>PTR-Niger !!!</mark></h2>
             </div>
             <!-- Slider Caption End -->
 
             <!-- Slider Search Start -->
             <div class="slider-search" data-aos="fade-up" data-aos-duration="1000">
                 <form action="#">
-                    <input class="slider-search__field" placeholder="What do you want to learn?">
+                    <input class="slider-search__field" placeholder="Qu'es-ce que vous voulez apprendre ?">
                     <button type="submit" class="slider-search__submit">
                         <i class="search-btn-icon fas fa-search"></i>
                     </button>
@@ -370,8 +210,8 @@
                                     </svg>
                         </div>
                         <div class="slider-widget-box-item__coption">
-                            <h4 class="slider-widget-box-item__title">6,000 <br> Online Courses</h4>
-                            <p>Explore wide-range of online courses</p>
+                            <h4 class="slider-widget-box-item__title">10,00 <br> Cours Onlines</h4>
+                            <p>Profitez des meilleurs programmes de formations</p>
                         </div>
                     </div>
                     <!-- Slider Widget Box Item End -->
@@ -387,8 +227,8 @@
                                     </svg>
                         </div>
                         <div class="slider-widget-box-item__coption">
-                            <h4 class="slider-widget-box-item__title">Top <br> Instructors</h4>
-                            <p>Learn from the best experts of the subjects</p>
+                            <h4 class="slider-widget-box-item__title">Excellents <br> Formateurs</h4>
+                            <p>Apprendre des meilleurs, vous garantie de devenir un !</p>
                         </div>
                     </div>
                     <!-- Slider Widget Box Item End -->
@@ -411,8 +251,8 @@
                                     </svg>
                         </div>
                         <div class="slider-widget-box-item__coption">
-                            <h4 class="slider-widget-box-item__title">Portable <br> Programs</h4>
-                            <p>Allow you to learn anywhere, anytime</p>
+                            <h4 class="slider-widget-box-item__title">Programmes <br> Flexibles</h4>
+                            <p>Quand vous voulez en fonctions de votre temps libre</p>
                         </div>
                     </div>
                     <!-- Slider Widget Box Item End -->
@@ -429,14 +269,7 @@
     <img class="slider-section-03__image-03" src="assets/images/home-03-hero-image-01.jpg" alt="image" width="173" height="171">
 
     <!-- Slider Widget Box Start -->
-    <div class="slider-image-widget-03 d-none d-md-block" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="1000">
-        <div class="slider-image-widget-03__icon">
-            <i class="far fa-users"></i>
-        </div>
-        <div class="slider-image-widget-03__caption">
-            <h4 class="slider-image-widget-03__title">Congratulations to Sophia <strong>for being student</strong> of the week this week!</h4>
-        </div>
-    </div>
+
     <!-- Slider Widget Box End -->
 
     <div class="slider-section-03__shape-wrapper scene">
@@ -488,7 +321,7 @@
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="menu-content-banner" style="background-image: url(assets/images/home-megamenu-bg.jpg);">
-                                            <h4 class="menu-content-banner__title">Achieve Your Goals With EduMall</h4>
+                                            <h4 class="menu-content-banner__title">Atteindre vos objectifs avec PTR-Niger</h4>
                                             <a href="#" class="menu-content-banner__btn btn btn-primary btn-hover-secondary">Purchase now</a>
                                         </div>
                                     </div>
